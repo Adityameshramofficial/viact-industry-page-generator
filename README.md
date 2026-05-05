@@ -1,0 +1,1 @@
+# viact-industry-page-generator
