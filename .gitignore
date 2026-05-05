@@ -1,0 +1,25 @@
+# Secrets — never commit
+.env
+credentials.json
+token.json
+
+# Temporary processing files — regenerated as needed
+.tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
