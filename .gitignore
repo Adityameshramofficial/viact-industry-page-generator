@@ -5,6 +5,14 @@ token.json
 
 # Temporary processing files — regenerated as needed
 .tmp/
+*.tmp.*
+tools/*.tmp*
+
+# Large reference/design files (not needed for deployment)
+*.docx
+Industry page screenshot/
+Reference  AI CCTV Use Cases section images/
+Reference Review Section images/
 
 # Python
 __pycache__/

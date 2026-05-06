@@ -113,21 +113,67 @@ credentials.json, token.json # Google OAuth (gitignore-d).
 
 5. EXECUTION WORKFLOW (Expected Output Structure)
 
-When the user says "Generate page for [Industry Name]", map intent to execution and output the plain Markdown deliverable like this:
+STRICT RULE: Every generated page MUST be divided into exactly 3 parts in this order.
+NEVER mix content across parts. NEVER skip a part. NEVER reorder parts.
 
---- SEO METADATA ---
-Meta Title: AI Safety & Productivity Solutions for Mining | viAct.ai
-Meta Description: Discover how viAct AI transforms mining operations—detect SIFs, reduce downtime by 70%, and empower HSE managers with real-time CCTV intelligence. Book a demo.
+When the user says "Generate page for [Industry Name]", output exactly this structure:
 
---- HERO SECTION ---
-Headline: AI for Safety & Productivity in Mining
-Sub-headline: Reduce mining operational downtime by 70% with unified intelligence across AI CCTV, IoT, and wearables.
-Description: Turn your underground and surface mines into a predictive intelligence system with viAct AI; using existing cameras to detect machinery, people, and process risks in real time, prevent SIFs, trigger instant alerts, and create safer mining environments.
+════════════════════════════════════════════════
+### PART 1: WEBPAGE CONTENT (DYNAMIC SECTIONS ONLY)
+════════════════════════════════════════════════
 
-[IMAGE PROMPT FOR GEMINI - HERO]: "CCTV perspective, high angle, AI bounding boxes in neon green and red, highly realistic underground mining site with heavy excavators, workers in PPE, modern industrial lighting, 4k resolution."
-Alt Text: "AI CCTV safety monitoring on a mining site detecting PPE violations and equipment hazards in real time"
+Contains ONLY the plain CMS-ready text for these dynamic sections, in order:
+  1. Hero Section
+  2. Proven Impact Metrics
+  3. AI CCTV Use Cases (6 blocks)
+  4. viGent: EHS AI Agent
+  5. Voices from the Field (4 reviews)
+  6. CTA Section
 
-(...proceed with the rest of the 6 sections exactly parameter-wise...)
+RULES FOR PART 1:
+- Include ALL H-tag labels ([H1], [H2], [H3]) on every heading
+- Sub-headline must be wrapped in **bold**
+- Review text must be wrapped in **"..."**
+- Do NOT include any image prompts here
+- Do NOT include SEO metadata here
+- Do NOT include static sections (One Intelligent Platform, How it Works, Hardware & Wearable Suite, Why viAct, Case Studies, FAQ)
+- Follow all word limits exactly as defined in the workflow SOP
+
+════════════════════════════════════════════════
+### PART 2: NANO BANANA IMAGE PROMPTS
+════════════════════════════════════════════════
+
+Contains ALL image prompts for this industry page, in order:
+  1. Hero Image (1920x1080 px)
+  2. Use Case Image 1 (520x327 px)
+  3. Use Case Image 2 (488x293 px)
+  4. Use Case Image 3 (520x303 px)
+  5. Use Case Image 4 (520x303 px)
+  6. Use Case Image 5 (520x303 px)
+  7. Use Case Image 6 (520x317 px)
+  8. viGent Dashboard Image (422x377 px)
+  9. Reviewer Profile Image 1 (56x56 px)
+  10. Reviewer Profile Image 2 (56x56 px)
+  11. Reviewer Profile Image 3 (56x56 px)
+  12. Reviewer Profile Image 4 (56x56 px)
+
+RULES FOR PART 2:
+- Exact pixel dimensions MUST be inside every prompt string
+- viGent image must be a dark-mode AI dashboard — NOT a CCTV field view
+- Reviewer images are professional headshots — NOT field/site photos
+
+════════════════════════════════════════════════
+### PART 3: ON-PAGE SEO METADATA
+════════════════════════════════════════════════
+
+Contains the complete SEO metadata package. Follow the exact format defined in the workflow SOP:
+  - URL
+  - Meta Title (max 60 chars)
+  - Meta Description (150-160 chars, must mention CCTV, IoT, Edge, Wearables)
+  - Keywords (5-6 long-tail, comma-separated)
+  - Schema (3 placeholder Google Docs links)
+  - Video Title & Video Description
+  - Alt texts for: 6 Use Case images, 4 Reviewer images, viGent image, CTA image
 
 6. ADVANCED SEO & IMAGE RULES
 
