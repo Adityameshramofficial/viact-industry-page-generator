@@ -319,7 +319,7 @@ def validate(industry: str) -> bool:
         st.warning("Enter an industry name first.")
         return False
     if not get_api_key():
-        st.error("GROQ_API_KEY not found. Add it to your .env file.")
+        st.error("GROQ_API_KEY not found. Add it in Streamlit Cloud → App settings → Secrets.")
         return False
     return True
 
